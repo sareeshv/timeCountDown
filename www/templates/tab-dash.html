@@ -1,0 +1,41 @@
+<ion-view view-title="Dashboard">
+  <ion-content class="padding">
+    <div class="list card">
+      <div class="item item-divider">Recent Updates</div>
+      <div class="item item-body" ng-if="!inValidEvent">
+        <h1>{{ eventDay.eventDetails }}</h1> <ion-spinner icon="lines" class="spinner-energized"></ion-spinner>
+        <br/>
+        <i class=”big”>{{ timeTillEvent.daysLeft }} <span>days,</span></i>
+        <i>
+          {{ timeTillEvent.hoursLeft }} hours,
+          {{ timeTillEvent.minutesLeft }} minutes and
+          {{ timeTillEvent.secondsLeft }} seconds remaining !
+        </i>
+      </div>
+
+
+
+      <div class="item item-body" ng-if="inValidEvent">
+        <h1> The Event is Already Over!!!</h1>
+      </div>
+      <div class="seconds-timer seconds-timer-running"><div class="seconds-timer-progress"></div></div>
+
+    </div>
+    <div class="list card">
+      <div class="item item-divider">Health</div>
+      <div class="item item-body">
+        <div>
+          You ate an apple today!
+        </div>
+      </div>
+    </div>
+    <div class="list card">
+      <div class="item item-divider">Upcoming</div>
+      <div class="item item-body">
+        <div>
+          You have <b>29</b> meetings on your calendar tomorrow.
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

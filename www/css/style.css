@@ -1,0 +1,28 @@
+/* Empty. Add your own CSS if you like */
+.seconds-timer {
+    top: auto;
+    bottom: 0;
+    height: 2px;
+    z-index: 10;
+}
+.seconds-timer, .seconds-wrapper {
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+    right: 0;
+    overflow: hidden;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+.seconds-timer-running .seconds-timer-progress {
+    width: 100%;
+}
+.seconds-timer-progress {
+    width: 0;
+    height: 100%;
+    background: #B30707;
+    -webkit-transition: width ease-out;
+    transition: width ease-out;
+}
